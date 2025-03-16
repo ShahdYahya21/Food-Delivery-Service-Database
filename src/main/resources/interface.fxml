@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="730.0" prefWidth="975.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="foodDeliveryService.interfaceController">
+   <children>
+      <AnchorPane layoutX="-3.0" layoutY="-1.0" prefHeight="760.0" prefWidth="190.0" style="-fx-background-color: #FFE4E1;">
+         <children>
+            <Button layoutX="1.0" layoutY="134.0" mnemonicParsing="false" onMouseClicked="#goToCities" style="-fx-background-color: #FFB6C1;" text="Cities">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="1.0" layoutY="181.0" mnemonicParsing="false" onMouseClicked="#goToCustomers" style="-fx-background-color: #FFB6C1;" text="Customers">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="1.0" layoutY="284.0" mnemonicParsing="false" onMouseClicked="#goToCsr" style="-fx-background-color: #FFB6C1;" text="Customer Service Representatives">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="-1.0" layoutY="333.0" mnemonicParsing="false" onMouseClicked="#GoToDrivers" style="-fx-background-color: #FFB6C1;" text="Drivers">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="1.0" layoutY="233.0" mnemonicParsing="false" onMouseClicked="#goToEmployees" prefHeight="26.0" prefWidth="110.0" style="-fx-background-color: #FFB6C1;" text="Employees">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutY="444.0" mnemonicParsing="false" onMouseClicked="#goToMenuItems" style="-fx-background-color: #FFB6C1;" text="MenuItems">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="-4.0" layoutY="658.0" mnemonicParsing="false" onMouseClicked="#goToOffers" style="-fx-background-color: #FFB6C1;" text="Offers">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutY="496.0" mnemonicParsing="false" onMouseClicked="#goToOrders" style="-fx-background-color: #FFB6C1;" text="Orders">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="-2.0" layoutY="550.0" mnemonicParsing="false" onMouseClicked="#goToOrderLines" style="-fx-background-color: #FFB6C1;" text="order Lines">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="1.0" layoutY="605.0" mnemonicParsing="false" onMouseClicked="#goToPayments" style="-fx-background-color: #FFB6C1;" text="Payments">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="1.0" layoutY="716.0" mnemonicParsing="false" onMouseClicked="#goToRatings" style="-fx-background-color: #FFB6C1;" text="Ratings">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="-2.0" layoutY="387.0" mnemonicParsing="false" onMouseClicked="#goToRestaurants" style="-fx-background-color: #FFB6C1;" text="Restaurants">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="16.0" layoutY="38.0" prefHeight="61.0" prefWidth="158.0" text="DashBoard">
+               <font>
+                  <Font name="American Typewriter Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="158.0" fitWidth="161.0" layoutX="219.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@food3.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="219.0" layoutY="16.0" prefHeight="27.0" prefWidth="172.0" text="Number Of Customers" textAlignment="RIGHT">
+         <font>
+            <Font name="American Typewriter Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="numOfCustLabel" layoutX="286.0" layoutY="50.0" prefHeight="67.0" prefWidth="48.0">
+      <font>
+         <Font name="American Typewriter Bold" size="40.0" />
+      </font>
+   </Label>
+      <ImageView fitHeight="158.0" fitWidth="161.0" layoutX="411.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@food3.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="411.0" layoutY="21.0" prefHeight="18.0" prefWidth="181.0" text="Number Of Restaurants">
+         <font>
+            <Font name="American Typewriter Bold" size="13.0" />
+         </font></Label>
+      <Label fx:id="numOfRestLabel" layoutX="475.0" layoutY="59.0" prefHeight="48.0" prefWidth="56.0">
+      <font>
+         <Font name="American Typewriter Bold" size="40.0" />
+      </font>
+      </Label>
+      <ImageView fitHeight="158.0" fitWidth="161.0" layoutX="602.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@food3.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="619.0" layoutY="20.0" prefHeight="18.0" prefWidth="134.0" text="Number Of Orders">
+         <font>
+            <Font name="American Typewriter Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="666.0" layoutY="59.0" prefHeight="48.0" prefWidth="56.0">
+         <font>
+            <Font name="American Typewriter Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="numberOfOrdersLabel" layoutX="660.0" layoutY="61.0" prefHeight="48.0" prefWidth="56.0">
+         <font>
+            <Font name="American Typewriter Bold" size="40.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="158.0" fitWidth="161.0" layoutX="790.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@food3.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="822.0" layoutY="19.0" prefHeight="18.0" prefWidth="134.0" text="Total Revenue">
+         <font>
+            <Font name="American Typewriter Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalProfitLabel" layoutX="799.0" layoutY="45.0" prefHeight="85.0" prefWidth="153.0">
+         <font>
+            <Font name="American Typewriter Bold" size="40.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="207.0" fitWidth="209.0" layoutX="625.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@food6.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="restStatus" fitHeight="205.0" fitWidth="208.0" layoutX="272.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@food4.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="289.0" layoutY="231.0" prefHeight="65.0" prefWidth="203.0" text="More States About">
+         <font>
+            <Font name="American Typewriter" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="279.0" layoutY="294.0" text="About the Restuarant">
+         <font>
+            <Font name="American Typewriter" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="644.0" layoutY="229.0" prefHeight="65.0" prefWidth="170.0" text="More States About">
+         <font>
+            <Font name="American Typewriter" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="650.0" layoutY="294.0" text="About the Drivers">
+         <font>
+            <Font name="American Typewriter" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="345.0" layoutY="360.0" mnemonicParsing="false" onMouseClicked="#goToRestStatusTable" style="-fx-background-color: #FFE4E1;" text="Click here" />
+      <Button layoutX="702.0" layoutY="362.0" mnemonicParsing="false" onMouseClicked="#goToDriversStatusTable" style="-fx-background-color: #FFE4E1;" text="Click here" />
+      <LineChart fx:id="totalRevenueChart" layoutX="240.0" layoutY="493.0" prefHeight="239.0" prefWidth="556.0" style="-fx-background-color: #FFE4E1;">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <ChoiceBox fx:id="monthChoiceBox" layoutX="773.0" layoutY="446.0" prefWidth="150.0" style="-fx-background-color: #FFB6C1;" />
+      <Label layoutX="239.0" layoutY="460.0" text="Total Revenue Per Month">
+         <font>
+            <Font name="American Typewriter Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="677.0" layoutY="454.0" text="select a month">
+         <font>
+            <Font name="American Typewriter Bold" size="12.0" />
+         </font>
+      </Label>
+
+   </children>
+</AnchorPane>

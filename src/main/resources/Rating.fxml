@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="583.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="foodDeliveryService.ratingController">
+    <children>
+        <TableView fx:id="ratingTable" layoutX="29.0" layoutY="127.0" prefHeight="357.0" prefWidth="692.0">
+            <columns>
+                <TableColumn fx:id="ratingIdCol" prefWidth="95.0" text="Rating Id" />
+                <TableColumn fx:id="customerIdCol" prefWidth="115.0" text="Customer Id" />
+                <TableColumn fx:id="restaurantIdCol" prefWidth="134.0" text="Restaurant Id" />
+                <TableColumn fx:id="ratingTextCol" prefWidth="231.0" text="Rating Text" />
+                <TableColumn fx:id="evaluationScoreCol" prefWidth="116.0" text="Evaluation Score" />
+            </columns>
+        </TableView>
+        <Button layoutX="463.0" layoutY="510.0" mnemonicParsing="false" onMouseClicked="#handleClearAll" text="Clear All" />
+        <Button layoutX="321.0" layoutY="510.0" mnemonicParsing="false" onMouseClicked="#handleRefresh" text="Refresh" />
+        <Button layoutX="181.0" layoutY="510.0" mnemonicParsing="false" onMouseClicked="#handleDelete" text="Delete" />
+        <Label layoutX="294.0" layoutY="81.0" text="Rating Table">
+            <font>
+                <Font size="31.0" />
+            </font>
+        </Label>
+        <Button layoutX="29.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#backToDashboard" text="Back To Dashboard" />
+    </children>
+</AnchorPane>

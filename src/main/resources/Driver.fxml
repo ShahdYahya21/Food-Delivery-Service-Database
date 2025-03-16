@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="588.0" prefWidth="738.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="foodDeliveryService.DriverController">
+   <children>
+      <TableView fx:id="driverTable" layoutX="74.0" layoutY="105.0" prefHeight="356.0" prefWidth="564.0">
+        <columns>
+          <TableColumn fx:id="driverIdCol" prefWidth="105.0" text="Driver Id" />
+          <TableColumn fx:id="licenseNumberCol" prefWidth="161.0" text="License number" />
+            <TableColumn fx:id="vehicleTypeCol" onEditCommit="#updateVehicleType" prefWidth="171.0" text="vehicle Type" />
+            <TableColumn fx:id="wageCol" onEditCommit="#updateWage" prefWidth="126.0" text="wage" />
+        </columns>
+      </TableView>
+      <TextField fx:id="driverIdText" layoutX="74.0" layoutY="482.0" prefHeight="26.0" prefWidth="121.0" promptText="Driver Id" />
+      <TextField fx:id="wageText" layoutX="482.0" layoutY="482.0" prefHeight="26.0" prefWidth="121.0" promptText="wage" />
+      <TextField fx:id="vehicleTypeText" layoutX="343.0" layoutY="482.0" prefHeight="26.0" prefWidth="121.0" promptText="vehicle Type" />
+      <TextField fx:id="licenseNumberText" layoutX="206.0" layoutY="482.0" prefHeight="26.0" prefWidth="121.0" promptText="License number" />
+      <Button layoutX="195.0" layoutY="530.0" mnemonicParsing="false" onMouseClicked="#handleAdd" text="Add" />
+      <Button layoutX="273.0" layoutY="530.0" mnemonicParsing="false" onMouseClicked="#handleDelete" text="Delete" />
+      <Button layoutX="437.0" layoutY="530.0" mnemonicParsing="false" onMouseClicked="#handleClearAll" text="ClearAll" />
+      <Button layoutX="356.0" layoutY="530.0" mnemonicParsing="false" onMouseClicked="#handleRefresh" text="Refresh" />
+      <Label layoutX="285.0" layoutY="63.0" text="Driver Table">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Button layoutX="47.0" layoutY="38.0" mnemonicParsing="false" onMouseClicked="#backToDashboard" text="Back to DashBoard" />
+   </children>
+</AnchorPane>

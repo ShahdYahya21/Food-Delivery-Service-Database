@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="484.0" prefWidth="656.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="foodDeliveryService.DriversStatusController">
+   <children>
+      <TableView fx:id="DriversStatusTable" layoutX="84.0" layoutY="86.0" prefHeight="326.0" prefWidth="489.0">
+        <columns>
+          <TableColumn fx:id="driverIDCol" prefWidth="98.0" text="Driver ID" />
+          <TableColumn fx:id="numOfOrdersCol" prefWidth="146.0" text="Number Of Orders" />
+            <TableColumn fx:id="avgTimeDeliveredCol" prefWidth="244.0" text="Average Time Delivered (in minutes)" />
+        </columns>
+      </TableView>
+      <Label layoutX="234.0" layoutY="50.0" text="Status About Drivers">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="monthChoiceBox" layoutX="492.0" layoutY="25.0" prefWidth="150.0" />
+      <Button layoutX="14.0" layoutY="25.0" mnemonicParsing="false" onMouseClicked="#backToDashBoard" text="Back To DashBoard" />
+   </children>
+</AnchorPane>

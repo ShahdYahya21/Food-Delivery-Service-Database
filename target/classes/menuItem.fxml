@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="656.0" prefWidth="712.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="foodDeliveryService.MenuItemController">
+   <children>
+      <TableView fx:id="menuItem_table" layoutX="33.0" layoutY="101.0" prefHeight="409.0" prefWidth="645.0">
+        <columns>
+          <TableColumn fx:id="idColumn" text="Item Id" />
+          <TableColumn fx:id="nameColumn" onEditCommit="#updateName" prefWidth="107.0" text="Item Name" />
+            <TableColumn fx:id="priceColumn" onEditCommit="#updatePrice" prefWidth="105.0" text="Price" />
+            <TableColumn fx:id="typeColumn" prefWidth="114.0" text="Type" />
+            <TableColumn fx:id="restaurantIdColumn" prefWidth="131.0" text="restaurant ID" />
+            <TableColumn fx:id="offerIdCol" prefWidth="107.0" text="Offer ID" />
+        </columns>
+      </TableView>
+      <TextField fx:id="nameField" layoutX="14.0" layoutY="522.0" prefHeight="26.0" prefWidth="153.0" promptText="Item Name" />
+      <TextField fx:id="restaurantIdField" layoutX="508.0" layoutY="522.0" promptText="restaurant Id" />
+      <TextField fx:id="typeField" layoutX="340.0" layoutY="522.0" promptText="Type" />
+      <TextField fx:id="priceField" layoutX="172.0" layoutY="522.0" promptText="Price" />
+      <Button layoutX="224.0" layoutY="595.0" mnemonicParsing="false" onMouseClicked="#handleAdd" text="Add" />
+      <Button layoutX="436.0" layoutY="595.0" mnemonicParsing="false" onMouseClicked="#handleClearAll" text="Clear All" />
+      <Button layoutX="356.0" layoutY="595.0" mnemonicParsing="false" onMouseClicked="#handleRefresh" text="Refresh" />
+      <Button layoutX="285.0" layoutY="595.0" mnemonicParsing="false" onMouseClicked="#handleDelete" text="Delete" />
+      <Button layoutX="43.0" layoutY="51.0" mnemonicParsing="false" onMouseClicked="#backtoDashboard" text="Back to Dashbord" />
+      <Label layoutX="268.0" layoutY="62.0" text="Menu Item Table">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="offerIdText" layoutX="276.0" layoutY="561.0" promptText="Offer ID" />
+   </children>
+</AnchorPane>

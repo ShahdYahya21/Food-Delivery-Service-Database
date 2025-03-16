@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="669.0" prefWidth="777.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="foodDeliveryService.CustomerController">
+   <children>
+      <TableView fx:id="customerTable" layoutX="14.0" layoutY="118.0" prefHeight="390.0" prefWidth="752.0">
+        <columns>
+          <TableColumn fx:id="customerIdCol" prefWidth="102.0" text="Customer Id" />
+          <TableColumn fx:id="customerNameCol" onEditCommit="#updateCustomerName" prefWidth="135.0" text="Customer Name" />
+            <TableColumn fx:id="addressCol" onEditCommit="#updateAddress" prefWidth="91.0" text="Adress" />
+            <TableColumn fx:id="phoneCol" onEditCommit="#updatePhone" prefWidth="105.0" text="phone" />
+            <TableColumn fx:id="emailCol" onEditCommit="#updateEamil" prefWidth="116.0" text="Email" />
+            <TableColumn fx:id="customerServiceRepresentativeIdCol" prefWidth="202.0" text="customer Service Representative Id" />
+        </columns>
+      </TableView>
+      <TextField fx:id="CustomerIdText" layoutX="55.0" layoutY="540.0" prefHeight="26.0" prefWidth="115.0" promptText="Customer Id" />
+      <TextField fx:id="customerServiceRepresentativeIdText" layoutX="267.0" layoutY="577.0" prefHeight="26.0" prefWidth="230.0" promptText="customer Service Representative Id" />
+      <TextField fx:id="emailText" layoutX="599.0" layoutY="540.0" prefHeight="26.0" prefWidth="115.0" promptText="Email" />
+      <TextField fx:id="phoneText" layoutX="456.0" layoutY="540.0" prefHeight="26.0" prefWidth="115.0" promptText="phone" />
+      <TextField fx:id="addressText" layoutX="324.0" layoutY="540.0" prefHeight="26.0" prefWidth="115.0" promptText="Adress" />
+      <TextField fx:id="customerNameText" layoutX="181.0" layoutY="540.0" prefHeight="26.0" prefWidth="115.0" promptText="Customer Name" />
+      <Button layoutX="240.0" layoutY="619.0" mnemonicParsing="false" onMouseClicked="#handleAdd" text="Add" />
+      <Button layoutX="487.0" layoutY="619.0" mnemonicParsing="false" onMouseClicked="#handleClearAll" text="Clear All" />
+      <Button layoutX="402.0" layoutY="619.0" mnemonicParsing="false" onMouseClicked="#handleRefresh" text="Refresh" />
+      <Button layoutX="324.0" layoutY="619.0" mnemonicParsing="false" onMouseClicked="#handleDelete" text="Delete" />
+      <Button layoutX="28.0" layoutY="42.0" mnemonicParsing="false" onMouseClicked="#backToDashboard" text="Back To Dashboard" />
+      <Label layoutX="288.0" layoutY="68.0" text="Customer Table">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

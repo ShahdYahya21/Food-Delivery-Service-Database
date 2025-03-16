@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="669.0" prefWidth="855.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="foodDeliveryService.OrderTableController">
+   <children>
+      <TableView fx:id="OrderTable" layoutX="-2.0" layoutY="99.0" prefHeight="384.0" prefWidth="881.0">
+        <columns>
+          <TableColumn fx:id="OrderNoCol" prefWidth="83.0" text="OrderNo" />
+          <TableColumn fx:id="customerIdCol" prefWidth="92.0" text="CostomerNo" />
+            <TableColumn fx:id="RestaurantIDCol" prefWidth="104.25955200195312" text="RestaurantID" />
+            <TableColumn fx:id="AddressDeliveryCol" minWidth="6.0" onEditCommit="#updateDeliveryAddress" prefWidth="176.24041748046875" text="Address Delivery" />
+            <TableColumn fx:id="CostCol" minWidth="0.0" prefWidth="128.544921875" text="Cost" />
+            <TableColumn fx:id="dateCol" minWidth="0.0" prefWidth="154.455078125" text="Date" />
+            <TableColumn fx:id="TimeCol" minWidth="0.0" prefWidth="140.75958251953125" text="Time" />
+        </columns>
+      </TableView>
+      <TextField fx:id="Cust_ID" layoutX="161.0" layoutY="510.0" promptText="Customer ID" />
+      <TextField fx:id="addressDelivery" layoutX="593.0" layoutY="510.0" promptText="Address Delivery" />
+      <TextField fx:id="Rest_ID" layoutX="376.0" layoutY="510.0" promptText="Restaurant ID" />
+      <Button layoutX="271.0" layoutY="561.0" mnemonicParsing="false" onMouseClicked="#handleAdd" text="Add" />
+      <Button layoutX="562.0" layoutY="560.0" mnemonicParsing="false" onMouseClicked="#handleClearAll" text="Clear All" />
+      <Button layoutX="456.0" layoutY="560.0" mnemonicParsing="false" onMouseClicked="#handleRefresh" text="Refresh" />
+      <Button layoutX="358.0" layoutY="561.0" mnemonicParsing="false" onMouseClicked="#handleDelete" text="Delete" />
+      <Button layoutX="39.0" layoutY="34.0" mnemonicParsing="false" onMouseClicked="#BackToDashboard" text="Back to Dashboard" />
+      <Label layoutX="367.0" layoutY="51.0" text="Order Table">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
